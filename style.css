@@ -1,41 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    /* ไล่เฉดสีพื้นหลังเป็นห้วงอวกาศลึกและเนบิวลาสีม่วงเข้ม */
-    background: linear-gradient(135deg, #03001e 0%, #7303c0 50%, #ec38bc 100%);
-    background-attachment: fixed; /* ล็อคพื้นหลังให้อยู่กับที่เวลาสกรอลล์ */
-    color: #f1f5f9;               /* สีตัวอักษรขาวนวลให้อ่านง่าย */
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Phimdao">
+    <title>ความภาคภูมิใจของ PHIMDAO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-header {
-    /* ส่วนหัวเว็บใช้สีม่วงกาแลคซีเข้มๆ */
-    background: rgba(15, 23, 42, 0.8); 
-    color: #f472b6;                     /* หัวข้อเด่นด้วยสีชมพูคอสมิก */
-    padding: 30px 0;
-    text-align: center;
-    border-bottom: 2px solid #a855f7;  /* เส้นขอบล่างสีม่วงสว่าง */
-}
+    <header>
+        <h1>สวัสดี! ผมคือ PHIMDAO</h1>
+        <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
+    </header>
 
-header h1 {
-    margin: 0;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(236, 56, 188, 0.6); /* เพิ่มเอฟเฟกต์เรืองแสงให้ตัวอักษร */
-}
+    <section id="about">
+        <h2>เกี่ยวกับผม</h2>
+        <p>ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง</p>
+    </section>
 
-header p {
-    margin: 5px 0 0;
-    color: #93c5fd;                     /* ข้อความย่อยใช้สีฟ้าอ่อนประกายดาว */
-}
+    <section id="projects">
+        <h2>ผลงานของผม</h2>
 
-section {
-    padding: 30px;
-    margin: 40px auto;
-    max-width: 800px;
-    /* ใช้พื้นหลังสีเข้มแบบโปร่งแสง (Glassmorphism) เพื่อให้เห็นเนบิวลาด้านหลังจางๆ */
-    background: rgba(15, 23, 42, 0.65); 
-    border-radius: 16px;                 /* ขอบมนขึ้นให้ดูโมเดิร์น */
-    border: 1px solid rgba(168, 85, 247, 0.3); /* เส้นขอบเรืองแสงบางๆ */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* เงาหนาเพิ่มมิติความลึก */
-}
+        <div class="project">
+            <h3>เว็บไซต์ Portfolio</h3>
+            <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถของผม</p>
+        </div>
+
+        <div class="project">
+            <h3>แอปพลิเคชันจัดการงาน</h3>
+            <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>ทักษะของผม</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, Django</li>
+            <li>Git และ GitHub</li>
+            <li>การออกแบบ UI/UX</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>
+            ติดต่อผมได้ที่:
+            <a href="mailto:phimdao@example.com">phimdao@example.com</a>
+        </p>
+        <p>&copy; <span id="year"></span> PHIMDAO. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
