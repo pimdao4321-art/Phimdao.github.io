@@ -1,57 +1,125 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Phimdao">
-    <title>ความภาคภูมิใจของ PHIMDAO</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* ไล่เฉดสีกาแลคซี: น้ำเงินลึก, ม่วงเนบิวลา, ชมพูคอสมิก, และดำอวกาศ */
+    background: linear-gradient(-45deg, #03001e, #7303c0, #ec38bc, #0f172a);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite; /* ปรับให้เคลื่อนไหวนุ่มนวลขึ้นเล็กน้อย */
+    background-attachment: fixed;       /* ล็อคพื้นหลังเวลาสกรอลล์ให้ดูมีมิติ */
+    color: #f1f5f9;                     /* เปลี่ยนสีตัวอักษรหลักเป็นสีขาวนวลให้อ่านง่ายบนพื้นหลังเข้ม */
+}
 
-    <header>
-        <h1>สวัสดี! ผมคือ PHIMDAO</h1>
-        <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
-    </header>
+/* พื้นหลังเคลื่อนไหว */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-    <section id="about">
-        <h2>เกี่ยวกับผม</h2>
-        <p>ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง</p>
-    </section>
+header {
+    /* ใช้เฉดสีน้ำเงินเข้มและสีม่วงเรืองแสง */
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(115, 3, 192, 0.8));
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 2px solid #ec38bc; /* เพิ่มเส้นขอบล่างสีชมพูคอสมิก */
+    animation: fadeDown 1s ease;
+}
 
-    <section id="projects">
-        <h2>ผลงานของผม</h2>
+header h1 {
+    margin: 0;
+    text-shadow: 0 0 12px rgba(236, 56, 188, 0.7); /* เอฟเฟกต์อักษรเรืองแสงแบบเนบิวลา */
+}
 
-        <div class="project">
-            <h3>เว็บไซต์ Portfolio</h3>
-            <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถของผม</p>
-        </div>
+header p {
+    margin: 5px 0 0;
+    color: #93c5fd; /* สีฟ้าอ่อนประกายดาว */
+}
 
-        <div class="project">
-            <h3>แอปพลิเคชันจัดการงาน</h3>
-            <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
-        </div>
-    </section>
+section {
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 800px;
+    /* ใช้สีพื้นหลังแบบโปร่งแสง (Glassmorphism) สไตล์กระจกอวกาศ */
+    background: rgba(15, 23, 42, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(168, 85, 247, 0.2); /* เส้นขอบม่วงบางๆ */
+    box-shadow: 0 0 20px rgba(115, 3, 192, 0.4); /* เงาเรืองแสงสีม่วง */
+    animation: fadeUp 1s ease;
+    transition: all 0.3s ease;
+}
 
-    <section id="skills">
-        <h2>ทักษะของผม</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Django</li>
-            <li>Git และ GitHub</li>
-            <li>การออกแบบ UI/UX</li>
-        </ul>
-    </section>
+section:hover {
+    transform: scale(1.02);
+    /* เมื่อเอาเมาส์วาง จะเรืองแสงออร่าสีชมพู-ม่วงเข้มขึ้น */
+    box-shadow: 0 0 30px rgba(236, 56, 188, 0.6);
+    border: 1px solid rgba(236, 56, 188, 0.5);
+}
 
-    <footer>
-        <p>
-            ติดต่อผมได้ที่:
-            <a href="mailto:phimdao@example.com">phimdao@example.com</a>
-        </p>
-        <p>&copy; <span id="year"></span> PHIMDAO. All rights reserved.</p>
-    </footer>
+h2 {
+    color: #38bdf8; /* สีฟ้าสว่างแบบดวงดาวเกิดใหม่ */
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
 
-    <script src="script.js"></script>
+.project {
+    margin-bottom: 20px;
+}
 
-</body>
-</html>
+.project h3 {
+    margin: 0 0 10px;
+    color: #f472b6; /* หัวข้อโปรเจกต์สีชมพูพาสเทลอวกาศ */
+}
+
+.project p {
+    color: #cbd5e1; /* สีเนื้อหาโปรเจกต์ให้อ่านง่าย */
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #cbd5e1;
+}
+
+/* ลิงก์อีเมลในหน้าเว็บ (ถ้ามี) ให้เข้ากับธีม */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #ec38bc;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(90deg, rgba(115, 3, 192, 0.9), rgba(15, 23, 42, 0.9));
+    color: #94a3b8;
+    margin-top: 30px;
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
